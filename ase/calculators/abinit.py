@@ -361,7 +361,7 @@ class Abinit(FileIOCalculator):
         self.spinpol = atoms.get_initial_magnetic_moments().any()
 
         if 'ABINIT_PP_PATH' in os.environ:
-            pppaths = os.environ['ABINIT_PP_PATH'].split(':')
+            pppaths = os.environ['ABINIT_PP_PATH'].split(';')
         else:
             pppaths = []
 
